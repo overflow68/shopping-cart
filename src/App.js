@@ -1,11 +1,13 @@
 import React from 'react';
+import Sidebar from './Sidebar.js';
+import './styles/App.css';
+
 
 function App() {
   return (
-    <div className="App">
-      
-      
-    </div>
+      <div className="App">
+       <Sidebar/>
+   </div>
   );
 }
 
