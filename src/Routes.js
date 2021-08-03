@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import App from "./App";
+import Store from "./Store";
 
 
 const Routes = () => {
@@ -8,6 +9,7 @@ const Routes = () => {
     <BrowserRouter>
       <Switch>
       <Route exact path="/" component={App} />
+      <Route exact path="/store" component={Store} />
       
       </Switch>
     </BrowserRouter>

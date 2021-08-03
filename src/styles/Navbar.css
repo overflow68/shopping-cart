@@ -3,9 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-body{
-  background-color: pink;
-}
+
 .navbar {
     background-color: rgb(51, 51, 51);
     height: 80px;
@@ -25,7 +23,7 @@ body{
     list-style: none;
     padding: 0 100px;
     background: #0f2027;
-    background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+   
   }
 
   .menu li {
@@ -77,7 +75,7 @@ body{
 .menu1 li:hover::before,
 .menu1 li:hover::after {
   border-color: #fff;
-  transition: border-color 0s, width 0.15s, height 0.15s;
+  transition: border-color 0.5s, width 0.08s, height 0.08s;
   width: 100%;
   height: 100%;
 }
@@ -100,14 +98,16 @@ body{
   
   .nav-menu {
     background:#0f2027;
-    width: 250px;
+    width: 300px;
     height: 100vh;
     display: flex;
     justify-content: center;
     position: fixed;
-    top: 0;
+    top: 80px;
     right: -100%;
     transition: 850ms;
+    color: #fff;
+    word-wrap: break-word;
   }
   
   .nav-menu.active {
