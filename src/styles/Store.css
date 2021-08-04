@@ -1,3 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+
 body{
-    background-color: #dfdad7;
+    background-color: #fff;
 }
+
+#itemContainer{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background:transparent;
+    padding: 10px;
+    align-items: center;
+    width: 70%;
+    margin: auto;
+}
+
+@media (max-width:900px){
+  #itemContainer{
+    display: grid;
+    grid-template-columns: auto auto;
+    background:transparent;
+    padding: 10px;
+    align-items: center;
+    width: 70%;
+    margin: auto;
+}
+}
+
+@media (max-width:550px){
+  #itemContainer{
+    display: grid;
+    grid-template-columns: auto;
+    background:transparent;
+    padding: 10px;
+    align-items: center;
+    width: 70%;
+    margin: auto;
+}
+}
+
+.Item {
+    font-size: 30px;
+    text-align: center;
+    margin: 20px;
+    border:1px solid rgb(219, 219, 219);
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10%;
+    -webkit-animation: fadein 1.5s;
+  }
+  @keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+  .price{
+    font-family: 'Gowun dodum';
+  }
+
+  .cont{
+    border-bottom: 1px solid rgb(153, 153, 153);
+  }
+
+
+  .shopBtn{
+    width: 160px;
+    height:40px;
+    font-size: 20px;
+    background-color: black;
+    border: black solid 1px;
+    color:#fff;
+    transition: 230ms;
+
+  }
+
+  .shopBtn:hover{
+    -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+  }

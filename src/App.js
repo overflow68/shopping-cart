@@ -15,6 +15,7 @@ function App() {
       }}>
         <Sidebar/>
         <h1 id="title">Be who<br/> you<br/> wanna be.</h1>
+        <h1 id="brand">Drip-Store</h1>
         <Link to ="/store"><button id = "shopBtn">Shop now</button></Link>
    </div>
   );

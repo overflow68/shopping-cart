@@ -40,12 +40,7 @@ const Sidebar = () => {
           </ul>
         </div>
         <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
-              <ul>STUFF
-              <li><h1>Store manoooosssso</h1></li>
-              <li><h1>Store manoooosssso</h1></li>
-              <li><h1>Store manoooosssso</h1></li>
-              <li><h1>Store manoooosssso</h1></li>
-              </ul>
+             
               
         </nav>
         </IconContext.Provider>

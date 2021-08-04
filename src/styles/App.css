@@ -5,9 +5,12 @@
   background-image: url('../images/girl.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  text-align: left;
+  -webkit-animation: fadein 1.2s;
 }
-
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
 *{
     box-sizing: border-box;
     margin: 0;
@@ -17,16 +20,26 @@
 
 
   #title{
-    font-size: 550%;
-    left:400px;
+    font-size: 750%;
+    left:300px;
     top:200px;
     position:absolute;
     font-family: 'Courgette',sans-serif;
   }
 
-  #shopBtn{
-    left:400px;
+  
+
+  #brand{
+    font-size: 350%;
+    left:1080px;
     top:550px;
+    position:absolute;
+    font-family: 'Courgette',sans-serif;
+  }
+
+  #shopBtn{
+    left:300px;
+    top:650px;
     position:absolute;
     width: 200px;
     height:60px;
@@ -34,11 +47,40 @@
     background-color: black;
     border: rgb(248, 183, 62) solid 1px;
     color:rgb(248, 183, 62);
+    transition: 230ms;
 
   }
 
   #shopBtn:hover{
-    -webkit-transform: scale(1.2);
-  -ms-transform: scale(1.2);
-  transform: scale(1.2);
+    -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
   }
+
+@media (max-width:500px){
+    #title{
+      font-size: 550%;
+      left:360px;
+      top:200px;
+      
+      font-family: 'Courgette',sans-serif;
+    }
+    #shopBtn{
+      left:360px;
+      top:550px;
+    
+      width: 200px;
+      height:60px;
+      font-size: 30px;
+      background-color: black;
+      border: rgb(248, 183, 62) solid 1px;
+      color:rgb(248, 183, 62);
+      transition: 230ms;
+  
+    }
+  
+  }
+
+
+
+  
