@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import Sidebar from './components/Sidebar.js';
+import {Sidebar} from './components/Sidebar.js';
 import './styles/Store.css';
 import items from './storeData.js';
-import Item from './components/Item.js'
+import Item from './components/Item.js';
+
 
 function Store() {
 
@@ -14,13 +15,14 @@ function Store() {
     const addToCart =(e)=>{
       const copyState = {...products};
 
+      if (products.cart.length<3){
       copyState.product.map(item=>item.id === e.target.id && !copyState.cart.includes(item) ? copyState.cart.push(item) : item);
-      console.log(copyState.cart);  FICAMOS AQUI
+      setProducts(copyState);}
     }
   
   return (
       <div className="Store">
-       <Sidebar/>
+       <Sidebar cart ={products.cart}/>
        <div id ="itemContainer">
          {products.product.map(item=>{
            return <Item addToCart = {addToCart} item ={item}/>
