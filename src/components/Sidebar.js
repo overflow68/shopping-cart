@@ -21,7 +21,36 @@ const Sidebar = (props) => {
     setSidebar(copyState);
     
  }
- 
+
+ const add = (e) =>{
+  let copyState = {...sidebar};
+  let id = e.target.closest(".cartItem").id;
+
+  
+  copyState.cart.forEach(item => {
+    item.id === id ? item.quantity++ : item = item;
+  })
+
+  setSidebar(copyState);
+  
+  }
+  
+  const remove = (e) =>{
+    
+    let copyState = {...sidebar};
+  let id = e.target.closest(".cartItem").id;
+
+  
+  copyState.cart.forEach(item => {
+    let index = copyState.cart.indexOf(item);
+    item.id === id ? item.quantity-- : item = item;
+    item.quantity < 1 ? copyState.cart.splice(index,1) : item = item;
+    
+  })
+
+  setSidebar(copyState);
+    
+    }
 
   return (
     <>
@@ -52,7 +81,7 @@ const Sidebar = (props) => {
         </IconContext.Provider>
         <nav className={sidebar.active ? 'nav-menu active' : 'nav-menu'}>
           <h1>Your shopping cart</h1>
-             {sidebar.cart.map(item =>{return <CartItem item={item}/>})}
+             {sidebar.cart.map(item =>{return <CartItem remove ={remove} add = {add} item={item}/>})}
              <button id = "checkout">Checkout now</button>
         </nav>
         
