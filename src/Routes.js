@@ -6,7 +6,7 @@ import Store from "./Store";
 
 const Routes = () => {
   return (
-    <BrowserRouter basename="/shop">
+    <BrowserRouter>
       <Switch>
       <Route exact path="/" component={App} />
       <Route exact path="/store" component={Store} />
